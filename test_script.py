@@ -12,6 +12,28 @@ while myName == name:
 print('It is good to meet you ' + myName)
 print('The length of your name is: ')
 print(len(myName))
+#myList = []
+#for i, c in enumerate(myName):
+#	myList.append(c)
+#	if i > len(myName) - 1:
+#		break
+print('Select a number between 1 and ' + str(len(myName)) + ' or type skip to skip this.' )
+
+#Can make input an int using int(), but will fix later
+
+myChar = input().lower()
+while myChar != 'skip':
+	if int(myChar) >= 1:
+		if  int(myChar) <= len(myName):
+			myList = []
+			for i, c in enumerate(myName):
+				myList.append(c)
+			print('The ' + myChar + ' character in your name is :')
+			print(*myList[int(myChar) -1])
+			myChar = input().lower()
+	else:
+		print('Please enter a valid number.')
+		myChar = input().lower()
 print('What is your age?')
 myAge = input()
 print('You will be ' + str(int(myAge) + 1) + ' in a year.')
