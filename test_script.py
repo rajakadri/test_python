@@ -48,6 +48,13 @@ if myChar == 'random':
 		myRandomList.append(c)
 	print(*myRandomList[random.randint(0, len(myName)-1)])
 
-print('What is your age?')
-myAge = input()
+try:
+       print('What is your age?')
+       myAge=int(input())
+except ValueError:
+    print("This is not a whole number")
+
 print('You will be ' + str(int(myAge) + 1) + ' in a year.')
+
+
+
