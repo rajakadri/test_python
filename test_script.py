@@ -5,7 +5,7 @@ import random
 #code
 #hey phoot
 name = ''
-print('Hello World!')
+print('Hello LEBRON!')
 print('What is your name?')
 myName = input()
 while myName == name:
